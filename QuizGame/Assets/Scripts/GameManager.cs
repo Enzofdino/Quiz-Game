@@ -18,6 +18,10 @@ public class GameManager : MonoBehaviour
 
     QuizManager quizManager;
 
+   
+    public Quiz.Difficulty Difficulty { get => difficulty; }
+    public Quiz.Theme Theme { get => theme; }
+
     private void Start()
     {
         quizManager = FindObjectOfType<QuizManager>();
@@ -32,6 +36,11 @@ public class GameManager : MonoBehaviour
         difficulty = (Quiz.Difficulty)difficultySelected;
         theme = (Quiz.Theme)themeSelected;
         //Solicitar um novo quiz
-        quizManager.SelectQuiz(theme, difficulty);
+        quizManager.SelectQuiz(Theme, Difficulty);
     }
+    public void GameOver()
+    {
+        //O jogo acaba
+    }
+    
 }

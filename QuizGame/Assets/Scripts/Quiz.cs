@@ -21,12 +21,10 @@ public class Quiz : ScriptableObject
     public string[] Answers { get => answers; }
     public Theme GetTheme { get => theme; }
     public Difficulty GetDificulty { get => dificulty; }
+    public int CorrectAnswer { get => correctAnswer;  }
 
     public enum Theme { Portuguese, Math, Geography};
     public enum Difficulty { Easy, Medium, Hard};
 
-    public bool CheckAnswer(int answerSelected)
-    {
-        return answerSelected == correctAnswer;
-    }
+    
 }
