@@ -15,13 +15,11 @@ public class GameManager : MonoBehaviour
 
     Quiz.Difficulty difficulty;
     Quiz.Theme theme;
-
-    QuizManager quizManager;
-
-   
     public Quiz.Difficulty Difficulty { get => difficulty; }
     public Quiz.Theme Theme { get => theme; }
 
+    QuizManager quizManager;
+ 
     private void Start()
     {
         quizManager = FindObjectOfType<QuizManager>();
